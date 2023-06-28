@@ -1,0 +1,219 @@
+@font-face {
+  font-family: Mefiyah;
+  src: url(img/fonts/Mefiyah.otf);
+}
+
+:root {
+  --colorOne: white;
+  --colorTwo: #272343;
+}
+
+body {
+  margin: 0;
+  background-color: var(--colorOne);
+}
+
+.blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+}
+
+.header {
+  background-color: var(--colorTwo);
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 2px 3px black;
+}
+
+.headerText {
+  font-family: Mefiyah;
+  font-size: 40px;
+  color: var(--colorOne);
+}
+
+.logInBtn {
+  font-family: Mefiyah;
+  font-size: 25px;
+  background-color: var(--colorOne);
+  color: var(--colorTwo);
+}
+
+#addBooksBtn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: var(--colorOne);
+  background-color: var(--colorTwo);
+}
+
+.popDisplay {
+  display: none;
+}
+
+#addBooksBtn,
+.logInBtn {
+  font-family: Mefiyah;
+  font-size: 25px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  aspect-ratio: 8/1;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #263159;
+  transition: 0.3s ease;
+}
+
+#addBooksBtn:hover,
+.logInBtn:hover {
+  transform: translateY(-3px) translateX(-3px);
+  transition: 0.3s ease;
+  box-shadow: 6px 6px 9px black;
+}
+
+#books {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: #272343;
+  margin: 25px;
+  width: 230px;
+  aspect-ratio: 3/4;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 1px 0px var(--colorTwo), 2px 0px white, 3px 0px black,
+    4px 0px white, 5px 0px black, 6px 0px white, 9px 0px var(--colorTwo),
+    0 0 5px -1px black, inset -1px 1px 2px rgba(255, 255, 255, 0.5);
+  color: var(--colorOne);
+  font-family: Mefiyah;
+  font-size: larger;
+  border: 1px solid black;
+}
+
+.title {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bolder;
+  margin-top: 35px;
+}
+
+.author {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-color: var(--colorOne);
+  width: 170px;
+  text-align: center;
+}
+
+.finished, .unfinished{
+  text-align: center;
+  color: var(--colorOne);
+  font-family: Mefiyah;
+  font-size: 18px;
+  border: 1px;
+  width: 75px;
+  height: 24px;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.unfinished{
+  background-color: red;
+}
+
+.finished{
+  background-color: green;
+}
+
+.remove{
+  background-color: rgb(207, 202, 202);
+  border: none;
+  font-family: Mefiyah;
+  border-radius: 3px;
+}
+
+/* pop up box */
+
+#addBookPopUp {
+  background-color: var(--colorTwo);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 7px 7px 10px black;
+}
+
+.popUpText {
+  font-family: Mefiyah;
+  color: var(--colorOne);
+  font-size: 26px;
+}
+
+input[type="text"], input[type="number"] {
+  width: 80%;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--colorTwo);
+  box-shadow: 0 0 8px 0 var(--colorTwo);
+}
+
+.readLabel {
+  color: var(--colorOne);
+  font-size: 15px;
+  font-family: Mefiyah;
+}
+
+#submitBtn {
+  font-family: Mefiyah;
+  color: var(--colorTwo);
+  font-size: 24px;
+  font-weight: bold;
+  aspect-ratio: 4/1;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #263159;
+  transition: 0.3s ease;
+  background-color: var(--colorOne);
+  margin-top: 10px;
+}
+
+.submitBtn:hover {
+  transform: translateY(-1px) translateX(-1px);
+  transition: 0.3s ease;
+  box-shadow: 4px 4px 6px black;
+}
+
+.footer{
+  font-family: Mefiyah; 
+  position: absolute;
+  font-weight: bolder;
+  font-size: 18px;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}

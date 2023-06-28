@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
     <script src="index.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <div style="display: flex; align-items: center; gap: 15px">
+          <div class="headerText">personal library</div>
+          <img src="img/books.png" alt="books" width="40px" height="40px" />
+        </div>
+        <button class="logInBtn">log in</button>
+      </div>
+
+      <div>
+        <button onclick="addBooks()" id="addBooksBtn">
+          <div>+ add books</div>
+        </button>
+      </div>
+      <div id="books"></div>
+    </div>
+
+    <form>
+      <div id="addBookPopUp" style="display: none">
+        <div class="popUpText">add new book</div>
+        <input placeholder="title" id="title" type="text" required />
+        <input placeholder="author" id="author" type="text" required />
+        <input placeholder="pages" id="pages" type="number" required />
+        <div>
+          <label for="read" class="readLabel">read</label>
+          <input placeholder="Read" id="read" type="checkbox" />
+        </div>
+        <button id="submitBtn">add</button>
+      </div>
+    </form>
+    <footer class="footer">Copyright © 2023 <a href="https://github.com/JeremySalinas"> Jeremy Salinas</a></footer>
+  </body>
 </html>
