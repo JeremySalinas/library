@@ -117,12 +117,12 @@ body {
   text-align: center;
   color: var(--colorOne);
   font-family: Mefiyah;
-  font-size: 18px;
+  font-size: 12px;
   border: 1px;
-  width: 75px;
-  height: 24px;
+  width: 65px;
+  height: 22px;
   border-radius: 3px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .unfinished{
@@ -138,6 +138,12 @@ body {
   border: none;
   font-family: Mefiyah;
   border-radius: 3px;
+  transition: 0.6s ease;
+}
+
+.remove:hover{
+  background-color: red;
+  transition: 0.6s ease;
 }
 
 /* pop up box */
